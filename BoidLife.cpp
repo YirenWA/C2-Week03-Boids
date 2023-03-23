@@ -43,7 +43,7 @@ int BoidLife::getLifetime()
 void BoidLife::update()
 {
 	
-	lifetime -= 0.6f;
+	lifetime -= 0.9f;
 	velocity = velocityDecay();
 	opacity = calculateOpacity();
 	size = calculateSize();
@@ -54,6 +54,8 @@ void BoidLife::update()
 void BoidLife::draw()
 {
 	// std::cout << "opt" << endl;
-	ofSetColor(ofRandom(110,190), 25, 0);
-	ofCircle(position.x, position.y, size);
+	ofSetColor(ofRandom(40,90), 75, ofRandom(170,215), ofRandom(195, 255));
+	ofDrawEllipse(position.x, position.y, size*2,size*2.6);
+	//ofNoFill();
+	//ofDrawRectangle(position.x, position.y, size, size);
 }
