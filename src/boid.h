@@ -16,7 +16,6 @@ protected:
 	ofVec3f position;
 	ofVec3f velocity;
 
-	int size2 = 9.5;
 	float separationWeight;
 	float cohesionWeight;
 	float alignmentWeight;
@@ -54,12 +53,7 @@ public:
 	void setSeparationThreshold(float f);
 	void setNeighbourhoodSize(float f);
 
-	int getDraw2Size();
-	void setDraw2Size(int s);
-
 	virtual void update(std::vector<Boid*>& otherBoids, ofVec3f& min, ofVec3f& max);
-
-	void updateWithinCircle(int radius);
 
 	void walls(ofVec3f& min, ofVec3f& max);
 
@@ -67,11 +61,6 @@ public:
 	virtual void draw1();
 	virtual void draw2();
 	virtual void draw3();
-
-	int mouseX;
-	int mouseY;
-
 };
-
 
 #endif

@@ -1,6 +1,6 @@
 #ifndef _TEST_APP
 #define _TEST_APP
-#define AMOUNT 13
+
 
 #include "ofMain.h"
 #include <vector>
@@ -31,34 +31,12 @@ public:
     std::vector<BoidLife *> traces;
     std::vector<BoidLife*> traces1;
 
-    int a,b,c,d;
+    int a, b,c,d;
     int mouseX;
     int mouseY;
 
     ofTrueTypeFont font;
     string text;
-
-
-    int nBytesRead = 0;
-    ofSerial serial;
-    char bytesReadString1[2];
-    char bytesReadString2[10];
-    char bytesReadString3[7];
-
-    string sensorValue;
-    int byteData;
-    int byteData1;
-    int byteData2;
-    string msg;
-    char sendData = 1;
-
-    bool byteDataReceived = false;
-    bool Screen = false;
-    bool Screen1 = false;
-    bool Screen2 = false;
-
-    vector<float> speedx;//ÃûÎªspeedxµÄ
-    vector<float> speedy;
 
 };
 
